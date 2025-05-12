@@ -1,50 +1,71 @@
-# Welcome to your Expo app 👋
+# MusicPlayerOne
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A sleek, modern music player app built with React Native and NativeWind. This app allows you to play music from your device with a beautiful UI and smooth animations.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Play music from local folders stored on your device
+- Sleek, modern UI with a purplish-pinkish color scheme
+- Dark mode support that can be toggled in settings
+- Music browsing screen showing local songs with metadata
+- Library screen to browse songs by artist, album, etc.
+- Custom music player UI with a beautiful visualizer
+- Mini-player that persists across screens
+- Smooth animations and transitions
 
-   ```bash
+## Tech Stack
+
+- React Native
+- NativeWind (Tailwind CSS for React Native)
+- Expo Router for navigation
+- React Native Track Player for audio playback
+- React Native Reanimated for animations
+- Bottom Sheet for the player modal
+
+## Installation
+
+1. Clone this repository
+2. Install dependencies:
+   ```
    npm install
    ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
+3. Start the development server:
+   ```
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+## Screenshots
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+[Coming soon]
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Project Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+MusicPlayerOne/
+├── app/                 # Main app screens and navigation
+│   ├── (tabs)/          # Tab-based navigation
+│   │   ├── index.tsx    # All songs screen
+│   │   ├── library.tsx  # Library screen
+│   │   └── settings.tsx # Settings screen
+│   ├── _layout.tsx      # Root layout
+│   └── index.tsx        # Entry point
+├── assets/              # Static assets
+├── components/          # UI components
+│   ├── common/          # Reusable components
+│   ├── player/          # Music player components
+│   └── library/         # Library screen components
+├── contexts/            # React contexts
+│   ├── ThemeContext.tsx # Theme management
+│   └── MusicContext.tsx # Music player state
+├── hooks/               # Custom hooks
+├── utils/               # Utility functions
+└── types/               # TypeScript type definitions
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Contributions
 
-## Learn more
+Contributions, issues, and feature requests are welcome!
 
-To learn more about developing your project with Expo, look at the following resources:
+## License
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+MIT

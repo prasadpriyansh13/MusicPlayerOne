@@ -9,13 +9,21 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppleMusicUsageDescription": "Allow MusicPlayerOne to access your music library",
+        "UIBackgroundModes": ["audio"]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_AUDIO"
+      ],
       "edgeToEdgeEnabled": true
     },
     "web": {
@@ -32,6 +40,15 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      "./expo-plugins",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "MusicPlayerOne needs access to your media library to play your music.",
+          "savePhotosPermission": "MusicPlayerOne would like to save photos to your media library.",
+          "isAccessMediaLocationEnabled": true
         }
       ]
     ],
