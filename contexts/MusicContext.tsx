@@ -276,7 +276,7 @@ export const MusicProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       // Get only audio files
       const media = await MediaLibrary.getAssetsAsync({
         mediaType: 'audio',
-        first: 100, // Limit to first 100 songs for performance
+        first: 500, // Limit to first 500 songs for performance
       });
       
       if (media.assets.length === 0) {
